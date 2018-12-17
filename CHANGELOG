@@ -1,3 +1,6 @@
+* Mon Dec 17 2018 Steven Pritchard <steven.pritchard@onyxpoint.com> - 4.0.0-0
+- Backport data/common.yaml change from 6b9e5263f0e173a47fa6442dcf95f016b4670dcf
+
 * Thu Apr 06 2017 Nick Markowski <nmarkowski@keywcorp.com> - 4.0.0-0
 - Updated apache rsync hosts_allow to $trusted_nets. The previous value
   of 127.0.0.1 would not allow apache to rsync if stunnel was disabled.
