@@ -81,6 +81,7 @@ checks:
       - CCI-000366
     oval-ids:
     - xccdf_org:ssgproject:content_rule_disable_ctrlaltdel_reboot
+    - disable_ctrlaltdel_reboot
   oval:com.puppet.forge.simp.simp.fips:
     settings:
       parameter: simp::fips
@@ -591,6 +592,7 @@ checks:
       - CCI-002038
     oval-ids:
     - xccdf_org:ssgproject:content_rule_sudo_remove_nopasswd
+    - sudo_remove_nopasswd
   oval:com.puppet.forge.simp.simp.sysctl.core_dumps:
     settings:
       parameter: simp::sysctl::core_dumps
@@ -1039,6 +1041,7 @@ checks:
       operatingsystemmajrelease: '7'
     oval-ids:
     - xccdf_org:ssgproject:content_rule_disable_ctrlaltdel_reboot
+    - disable_ctrlaltdel_reboot
   oval:com.puppet.forge.simp.simp.sysctl.net__ipv4__conf__default__accept_source_route:
     settings:
       parameter: simp::sysctl::net__ipv4__conf__default__accept_source_route
