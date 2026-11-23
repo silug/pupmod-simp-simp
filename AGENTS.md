@@ -202,18 +202,11 @@ explicit default rather than assuming `simp_options` is included.
 ## Dependencies
 
 This is a **meta-module: it depends on essentially the entire SIMP stack.**
-`metadata.json` declares **43** dependencies — do not transcribe them all when
-editing; treat the dependency list as "the whole SIMP ecosystem." A
-representative handful:
-
-- `simp/pupmod` `>= 10.0.0 < 11.0.0`
-- `simp/simplib` `>= 4.9.0 < 5.0.0` (provides `simplib::lookup`,
-  `simplib::knockout`/`simp::knockout` support, `simplib::in_bolt`,
-  `simplib::module_metadata::assert`, `runlevel`, facts)
-- `simp/ssh` `>= 6.11.0 < 7.0.0`
-- `simp/sssd` `>= 7.0.0 < 8.0.0`
-- `simp/stunnel` `>= 7.0.0 < 8.0.0`
-- `puppetlabs/stdlib` `>= 8.0.0 < 10.0.0`
+`metadata.json` is the source of truth for the dependency list and version
+ranges; read it there rather than copying ranges here. Modules the code leans
+on most: `simp/pupmod`, `simp/simplib` (`simplib::lookup`, knockout support,
+`simplib::in_bolt`, `simplib::module_metadata::assert`, `runlevel`, facts),
+`simp/ssh`, `simp/sssd`, `simp/stunnel` and `puppetlabs/stdlib`.
 
 There are **no optional dependencies** — the module makes no
 `simplib::assert_optional_dependency` calls.

@@ -1,9 +1,10 @@
-* Thu Nov 12 2026 Steven Pritchard <steve@sicura.us> - 11.1.0
-- Allow `simp/pupmod` 13.x, `simp/sssd` 11.x, `simp/ssh` 10.x and
-  `simp/tftpboot` 9.x. `simp::server::kickstart` only includes the `tftpboot`
-  class, which tftpboot 9.0.0 doesn't change. The test fixtures use the default
-  branches of these modules, since pupmod 13.1.0, sssd 11.0.0 and tftpboot
-  9.0.0 aren't tagged yet
+* Mon Nov 23 2026 Steven Pritchard <steve@sicura.us> - 11.1.0
+- Allow `simp/pupmod` 13.x, `simp/sssd` 11.x, `simp/ssh` 10.x and 11.x,
+  `simp/stunnel` 10.x, `simp/iptables` 10.x and `simp/tftpboot` 9.x. simp
+  doesn't use the `tcpwrappers` parameters that ssh 11 and stunnel 10 remove,
+  doesn't set `iptables::enable` (whose default iptables 10 changes), and
+  `simp::server::kickstart` only includes the `tftpboot` class, which
+  tftpboot 9.0.0 doesn't change
 - pupmod 13 and sssd 11 no longer configure anything on a bare `include`.
   Enforce each module's `simp:defaults` compliance profile
   (`compliance_engine::enforcement: [simp:defaults]`), or set their
